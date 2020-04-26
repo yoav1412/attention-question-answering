@@ -1,0 +1,4 @@
+*
+!.gitignore
+!model_checkpoints/
+!tensorboard_logs/
