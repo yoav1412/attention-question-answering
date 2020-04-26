@@ -16,7 +16,6 @@ tf.set_random_seed(1412)
 np.random.seed(1412)
 
 model = build_model(cf)
-#model.load_weights(os.path.join(cf.MODEL_CHECKPOINTS_DIR, "model_10.hdf5")) # TODO this is just to conitnue faild training
 optimizer = Adam(beta_1=cf.ADAM_b1, beta_2=cf.ADAM_b2, epsilon=cf.ADAM_eps, clipnorm=cf.GRAD_CLIP)
 
 
@@ -44,7 +43,7 @@ tensorboard_callback = TensorBoard(log_dir=cf.TENSORBOARD_LOGS_DIR)
 model.fit(x=[tokenized_contexts, tokenized_questions],
           y=[one_hot_start_positions, one_hot_end_positions, y_start_positions, y_end_positions],
           batch_size=cf.BATCH_SIZE, epochs=cf.TRAINING_EPOCHS,
-          callbacks=[lr_callback,eval_callback], initial_epoch=10) # TODO: initial EPCH!!
+          callbacks=[lr_callback,eval_callback])
 
 
 

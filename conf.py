@@ -57,5 +57,5 @@ class Config:
     RELU_INIT = "he_uniform"
 
     # Evaluation Configs:
-    EVALUATE_WITHIN_EPOCH_EVERY_N_STEPS = 30000 // BATCH_SIZE
+    EVALUATE_WITHIN_EPOCH_EVERY_N_STEPS = 28839 // BATCH_SIZE # 3 evaluations per epoch
     WITHIN_EPOCH_EVALUATION_LIMIT = 3000 if LIMIT_VAL is None else min(LIMIT_VAL, 1000)
