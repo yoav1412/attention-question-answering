@@ -1,8 +1,8 @@
 # Natural Language Comprehension With Transformers
 ## Extractive question answering with the [SQUAD dataset](https://rajpurkar.github.io/SQuAD-explorer/)
 
-* This project is a Keras (tensorflow) implementation of a deep neural network that combines self-attention (transformer) architecture with convolutional layers.
-* The model architecture generally follows the one proposed [here](https://arxiv.org/pdf/1804.09541.pdf) by Yu et. al. (QANet, 2018). The most significant change is that in this implementation we skip all character-level representation.
+* This project is a Keras (tensorflow) implementation of a deep neural network that combines self-attention (transformer) architecture with convolutional layers. 
+* The model architecture generally follows the one proposed [here](https://arxiv.org/pdf/1804.09541.pdf) by Yu et. al. (QANet, 2018). The most significant change is that in this implementation we skip all character-level representation. Some of the layer implementations are inspired by [this tutorial](https://www.tensorflow.org/tutorials/text/transformer#top_of_page) and [this repo](https://github.com/nptdat/qanet).
 
 ### The Dataset
 We solve the problem of supervised question-answering, where each exmaple in the data is composed of a context paragraph, and a question. The answer to the question is found within the context, and the model's output is a set of two pointers - to the start and end positions of the answer in the context paragraph.
