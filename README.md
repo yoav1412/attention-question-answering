@@ -9,13 +9,13 @@ We solve the problem of supervised question-answering, where each exmaple in the
 For further reading about the problem formulation refer to the [SQUAD paper](https://arxiv.org/abs/1606.05250).
 
 ### Model Architecture
-The general architecture, proposed in the QANet paper, is a follows:
+The general architecture, proposed in the QANet paper, is as follows:
 ![qanet-arch](https://github.com/yoav1412/attention-question-answering/blob/master/images/qanet-arch.jpg)
 
 ### Training
 I trained two versions of the model, both with 1 embedding-encoder block and 7 model-encoder blocks (as proposed in the QANet paper), but with different hidden layer sizes of 96 and 128 (original mpaper uses just 128).
-The training takes ~30 minutes per epoch on a `p3.2xlarge` machine on aws. 
-
+The training takes ~30 minutes per epoch on a `p3.2xlarge` gpu instance on aws. 
+![validation metrics](https://github.com/yoav1412/attention-question-answering/blob/master/images/validation_metrics_plot.png)
 
 ### Results
 * The 96-d model was trained for 16 epochs and achieved **73.4 / 60.8 f1 / em** scores (see the SQUAD paper for more information about the evaluation metrics).
