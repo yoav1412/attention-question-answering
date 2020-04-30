@@ -35,11 +35,11 @@ To run this code:
 5. Configure the desired training parameters in `conf.py` (such as number of epochs, batch size, etc.)
 6. Run `python -m main.py`
 
-### Inference with a trained model
+### Interactive question answering with a trained model
 The file `inference.py` contains a script that enables providing a trained model with a new context and question, and recieve an asnwer.
 To use it:
-1. Extract the trained model weights form the zip file in `train_models` and place it in the same directory.
-2. Run `python inference.py --weights={PATH_TO_WEIGHTS-FILE}`
+1. Extract the trained model weights form the zip file in [trained_models](https://github.com/yoav1412/attention-question-answering/tree/master/trained_models) and place it in the same directory.
+2. Run `python inference.py --weights={PATH_TO_WEIGHTS_FILE}`
 
 An example interactive session using the 128-d model:
 ![example](https://github.com/yoav1412/attention-question-answering/blob/master/images/interactive_session_example.jpg)
